@@ -414,9 +414,8 @@ SOFTWARE.
 
 ## 📧 Contact
 
-- **GitHub**: [@USERNAME](https://github.com/USERNAME)
-- **Twitter**: [@USERNAME](https://twitter.com/USERNAME)
-- **Email**: your.email@example.com
+- **GitHub**: [@USERNAME](https://github.com/coolsourav100)
+
 
 ---
 
@@ -424,7 +423,6 @@ SOFTWARE.
 
 [![Star History Chart](https://api.star-history.com/svg?repos=USERNAME/simpletextbot&type=Date)](https://star-history.com/#USERNAME/simpletextbot&Date)
 
----
 
 <div align="center">
 
