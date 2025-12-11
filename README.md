@@ -24,6 +24,9 @@
 
 **SimpleTextBot** is a beautifully crafted AI chat interface that combines minimal design with powerful functionality. Built with modern web technologies, it offers a seamless chat experience with smooth animations, gradient aesthetics, and an intuitive interface.
 
+
+### ✨ Try it live:  https://www.simpletextbot.online/
+
 ### ✨ Key Highlights
 
 - 🎨 **Stunning Dark Landing Page** - Gradient animations, glowing effects, and live chat preview
