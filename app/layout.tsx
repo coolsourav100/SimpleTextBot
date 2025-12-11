@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "simpletextbot",
+  title: "Simple Text Bot",
   description: "A Text Bot that dont store your data",
 };
 

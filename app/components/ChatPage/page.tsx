@@ -24,6 +24,7 @@ const ChatPage: React.FC<ChatPageProps> = ({ onBackToHome }) => {
 
   const chatEndRef = useRef<HTMLDivElement | null>(null);
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
+  const sidebarRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (messages.length > 0) {
@@ -36,6 +37,27 @@ const ChatPage: React.FC<ChatPageProps> = ({ onBackToHome }) => {
       textareaRef.current.focus();
     }
   }, []);
+
+  // Click outside to close sidebar
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isSidebarOpen &&
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target as Node)
+      ) {
+        setIsSidebarOpen(false);
+      }
+    };
+
+    if (isSidebarOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isSidebarOpen]);
 
   const handleSend = async (): Promise<void> => {
     const trimmed = input.trim();
@@ -114,6 +136,7 @@ const ChatPage: React.FC<ChatPageProps> = ({ onBackToHome }) => {
     <div className="min-h-screen bg-[#F5F5F5] flex">
       {/* Sidebar */}
       <div
+        ref={sidebarRef}
         className={`fixed lg:relative top-0 left-0 bottom-0 bg-[#202123] flex flex-col z-40 transition-all duration-300 ease-in-out ${
           isSidebarOpen ? "w-64" : "w-0 lg:w-0"
         } overflow-hidden`}
