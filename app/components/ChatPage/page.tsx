@@ -344,13 +344,14 @@ const ChatPage: React.FC<ChatPageProps> = ({ onBackToHome }) => {
                 className="w-full resize-none rounded-3xl border border-gray-300 bg-white px-4 md:px-6 py-3 md:py-4 pr-12 md:pr-14 focus:outline-none focus:border-gray-400 focus:ring-2 focus:ring-gray-200 transition-all text-gray-900 placeholder-gray-500 shadow-sm text-sm md:text-base"
                 style={{ minHeight: "48px", maxHeight: "200px" }}
               />
-              <button
-                onClick={handleSend}
-                disabled={!input.trim() || isTyping}
-                className="absolute right-2 md:right-3 bottom-2 md:bottom-3 w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-900 text-white flex items-center justify-center hover:scale-110 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all shadow-md"
-              >
-                <span className="text-base md:text-lg font-bold">↑</span>
-              </button>
+                    <button
+        onClick={handleSend}
+        disabled={!input.trim() || isTyping}
+        className="absolute right-2 md:right-3 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-900 text-white flex items-center justify-center hover:scale-110 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all shadow-md"
+      >
+        <span className="text-base md:text-lg font-bold">↑</span>
+      </button>
+
             </div>
             <p className="text-xs text-gray-500 text-center mt-2 md:mt-3">
               Press Enter to send • Shift + Enter for new line
