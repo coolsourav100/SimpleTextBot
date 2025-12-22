@@ -120,3 +120,28 @@ export async function chatOnce(message, history = []) {
     );
   }
 }
+
+
+
+
+// Very small "ping" to keep / wake the Space
+export async function pingSpace() {
+  const payload = { data: ["ping", []] };
+
+  try {
+    const res = await fetchWithTimeout(
+      `${SPACE_URL}${API_BASE}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      },
+      5000
+    );
+
+  
+    console.log("HF ping status", res.status);
+  } catch (err) {
+    console.error("HF ping failed:", err);
+  }
+}
